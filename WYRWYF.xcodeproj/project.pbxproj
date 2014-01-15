@@ -33,6 +33,7 @@
 		13E2CD1D1883652000B6EF8A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13E2CD1B1883652000B6EF8A /* InfoPlist.strings */; };
 		13E2CD1F1883652000B6EF8A /* WYRWYFTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E2CD1E1883652000B6EF8A /* WYRWYFTests.m */; };
 		13E2CD29188365A500B6EF8A /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13E2CD28188365A500B6EF8A /* Storyboard.storyboard */; };
+		13F0C9FF188718E40087131D /* MIFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F0C9FE188718E40087131D /* MIFriendsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		13E2CD1C1883652000B6EF8A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		13E2CD1E1883652000B6EF8A /* WYRWYFTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYRWYFTests.m; sourceTree = "<group>"; };
 		13E2CD28188365A500B6EF8A /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		13F0C9FD188718E40087131D /* MIFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIFriendsViewController.h; sourceTree = "<group>"; };
+		13F0C9FE188718E40087131D /* MIFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIFriendsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				13E2CD28188365A500B6EF8A /* Storyboard.storyboard */,
+				13F0C9FD188718E40087131D /* MIFriendsViewController.h */,
+				13F0C9FE188718E40087131D /* MIFriendsViewController.m */,
 				13B0C56018870295002754B1 /* MILoginViewController.h */,
 				13B0C56118870295002754B1 /* MILoginViewController.m */,
 				136787B51884757A00898F9A /* MISignupViewController.h */,
@@ -303,6 +308,7 @@
 				13E2CD061883652000B6EF8A /* main.m in Sources */,
 				136787B71884757A00898F9A /* MISignupViewController.m in Sources */,
 				1372F213188370530001C382 /* MIFeedViewController.m in Sources */,
+				13F0C9FF188718E40087131D /* MIFriendsViewController.m in Sources */,
 				13B0C56218870295002754B1 /* MILoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

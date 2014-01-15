@@ -16,11 +16,41 @@
                     </tabBar>
                     <connections>
                         <segue destination="3ZB-XT-Aen" kind="relationship" relationship="viewControllers" id="IBf-yC-xS5"/>
+                        <segue destination="BHP-Mh-zF6" kind="relationship" relationship="viewControllers" id="a2w-qo-Yad"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIE-CX-Dbs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-209" y="134"/>
+        </scene>
+        <!--Friends View Controller - Friends-->
+        <scene sceneID="Ggm-H9-MTc">
+            <objects>
+                <tableViewController id="yZF-pp-dfc" customClass="MIFriendsViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="73c-YF-lG2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="G2H-4M-lLa">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G2H-4M-lLa" id="vCs-pc-hCk">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yZF-pp-dfc" id="CqU-KE-ZMa"/>
+                            <outlet property="delegate" destination="yZF-pp-dfc" id="Z9s-Av-98U"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Friends" id="egg-BU-zDR"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pzy-El-cTf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1158" y="686"/>
         </scene>
         <!--Feed View Controller - WYRWF-->
         <scene sceneID="hXb-Jx-ZMC">
@@ -201,6 +231,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="duD-zt-mTM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="236" y="-89"/>
+        </scene>
+        <!--Navigation Controller - Friends-->
+        <scene sceneID="wQu-yX-z7y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BHP-Mh-zF6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Friends" id="ybF-zq-mak"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="unz-zK-H8I">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yZF-pp-dfc" kind="relationship" relationship="rootViewController" id="G04-BG-yao"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W59-C2-YoN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="632" y="686"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
