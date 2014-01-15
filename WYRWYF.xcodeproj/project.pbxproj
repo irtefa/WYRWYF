@@ -17,7 +17,9 @@
 		136787B2188467B900898F9A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136787A9188467B900898F9A /* Security.framework */; };
 		136787B3188467B900898F9A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136787AA188467B900898F9A /* StoreKit.framework */; };
 		136787B4188467B900898F9A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136787AB188467B900898F9A /* SystemConfiguration.framework */; };
+		136787B71884757A00898F9A /* MISignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 136787B61884757A00898F9A /* MISignupViewController.m */; };
 		1372F213188370530001C382 /* MIFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1372F212188370530001C382 /* MIFeedViewController.m */; };
+		13B0C56218870295002754B1 /* MILoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B0C56118870295002754B1 /* MILoginViewController.m */; };
 		13E2CCFA1883651F00B6EF8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E2CCF91883651F00B6EF8A /* Foundation.framework */; };
 		13E2CCFC1883652000B6EF8A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E2CCFB1883652000B6EF8A /* CoreGraphics.framework */; };
 		13E2CCFE1883652000B6EF8A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E2CCFD1883652000B6EF8A /* UIKit.framework */; };
@@ -54,8 +56,12 @@
 		136787A9188467B900898F9A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		136787AA188467B900898F9A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		136787AB188467B900898F9A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		136787B51884757A00898F9A /* MISignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MISignupViewController.h; sourceTree = "<group>"; };
+		136787B61884757A00898F9A /* MISignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MISignupViewController.m; sourceTree = "<group>"; };
 		1372F211188370530001C382 /* MIFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIFeedViewController.h; sourceTree = "<group>"; };
 		1372F212188370530001C382 /* MIFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIFeedViewController.m; sourceTree = "<group>"; };
+		13B0C56018870295002754B1 /* MILoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MILoginViewController.h; sourceTree = "<group>"; };
+		13B0C56118870295002754B1 /* MILoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MILoginViewController.m; sourceTree = "<group>"; };
 		13E2CCF61883651F00B6EF8A /* WYRWYF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYRWYF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E2CCF91883651F00B6EF8A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		13E2CCFB1883652000B6EF8A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -153,6 +159,10 @@
 			isa = PBXGroup;
 			children = (
 				13E2CD28188365A500B6EF8A /* Storyboard.storyboard */,
+				13B0C56018870295002754B1 /* MILoginViewController.h */,
+				13B0C56118870295002754B1 /* MILoginViewController.m */,
+				136787B51884757A00898F9A /* MISignupViewController.h */,
+				136787B61884757A00898F9A /* MISignupViewController.m */,
 				1372F211188370530001C382 /* MIFeedViewController.h */,
 				1372F212188370530001C382 /* MIFeedViewController.m */,
 				13E2CD081883652000B6EF8A /* MIAppDelegate.h */,
@@ -291,7 +301,9 @@
 			files = (
 				13E2CD0A1883652000B6EF8A /* MIAppDelegate.m in Sources */,
 				13E2CD061883652000B6EF8A /* main.m in Sources */,
+				136787B71884757A00898F9A /* MISignupViewController.m in Sources */,
 				1372F213188370530001C382 /* MIFeedViewController.m in Sources */,
+				13B0C56218870295002754B1 /* MILoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

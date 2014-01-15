@@ -17,12 +17,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    [testObject setObject:@"bar" forKey:@"foo"];
-    [testObject save];
 
-    [self performSegueWithIdentifier:@"showLogin" sender:self];
+    if (![PFUser currentUser]) {
+        [self performSegueWithIdentifier:@"showLogin" sender:self];
+    }
 }
 
 #pragma mark - Table view data source
@@ -63,4 +61,8 @@
 
  */
 
+- (IBAction)Logout:(id)sender {
+    [PFUser logOut];
+    [self performSegueWithIdentifier:@"showLogin" sender:self];
+}
 @end

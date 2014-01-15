@@ -11,4 +11,6 @@
 
 @interface MIFeedViewController : UITableViewController
 
+- (IBAction)Logout:(id)sender;
+
 @end
