@@ -7,6 +7,7 @@
 //
 
 #import "MIFeedViewController.h"
+#import <AddressBook/AddressBook.h>
 
 @interface MIFeedViewController ()
 
@@ -20,6 +21,7 @@
 
     if (![PFUser currentUser]) {
         [self performSegueWithIdentifier:@"showLogin" sender:self];
+        
     }
 }
 

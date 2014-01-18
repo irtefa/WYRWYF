@@ -31,9 +31,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search for usernames" id="Odd-nm-boy">
+                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="yZF-pp-dfc" id="UIa-0V-sH8"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="G2H-4M-lLa">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="130" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G2H-4M-lLa" id="vCs-pc-hCk">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -47,8 +55,28 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Friends" id="egg-BU-zDR"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="8gP-TY-Mbn" id="X09-yX-rhQ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pzy-El-cTf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="qYO-R1-Gyt">
+                    <connections>
+                        <outlet property="delegate" destination="yZF-pp-dfc" id="qfw-iO-nCD"/>
+                        <outlet property="searchContentsController" destination="yZF-pp-dfc" id="SpR-V5-qxd"/>
+                        <outlet property="searchResultsDataSource" destination="yZF-pp-dfc" id="GeZ-hM-qca"/>
+                        <outlet property="searchResultsDelegate" destination="yZF-pp-dfc" id="jOI-Zu-M7i"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="8gP-TY-Mbn">
+                    <connections>
+                        <outlet property="delegate" destination="yZF-pp-dfc" id="bKO-ys-i8S"/>
+                        <outlet property="searchBar" destination="Odd-nm-boy" id="dNi-4H-sFj"/>
+                        <outlet property="searchContentsController" destination="yZF-pp-dfc" id="Ybp-Pb-zp9"/>
+                        <outlet property="searchResultsDataSource" destination="yZF-pp-dfc" id="z6G-G3-Ctn"/>
+                        <outlet property="searchResultsDelegate" destination="yZF-pp-dfc" id="rLU-2d-Ifi"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1158" y="686"/>
         </scene>

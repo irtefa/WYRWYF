@@ -12,7 +12,9 @@
 
 @end
 
-@implementation MIFriendsViewController
+@implementation MIFriendsViewController {
+    NSArray *searchResults;
+}
 
 - (void)viewDidLoad
 {
@@ -37,6 +39,10 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return [searchResults count];
+    }
+    
     return [self.allUsers count];
 }
 
@@ -44,14 +50,33 @@
 {
     static NSString *CellIdentifier = @"Cell";
     
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 
-    PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
-    cell.textLabel.text = user.username;
+
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        PFUser *user = [searchResults objectAtIndex:indexPath.row];
+        cell.textLabel.text = user.username;
+    } else {
+        PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
+        cell.textLabel.text = user.username;
+    }
     
     return cell;
 }
 
+// Helper methods
+
+-(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scop {
+    NSPredicate *resultPredicate = [NSPredicate
+                                    predicateWithFormat:@"SELF.username LIKE[cd] %@",
+                                    searchText];
+    searchResults = [self.allUsers filteredArrayUsingPredicate:resultPredicate];
+}
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)
+controller shouldReloadTableForSearchString:(NSString *)searchString {
+    [self filterContentForSearchText:searchString scope:[[self.searchDisplayController.searchBar scopeButtonTitles]objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    
+    return YES;
+}
 @end
