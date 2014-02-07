@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		132E2A2418A4D1430040443F /* MICreateQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 132E2A2318A4D1430040443F /* MICreateQuestionViewController.m */; };
 		136787A21884674500898F9A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136787A11884674500898F9A /* Parse.framework */; };
 		136787AC188467B900898F9A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136787A3188467B900898F9A /* AudioToolbox.framework */; };
 		136787AD188467B900898F9A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136787A4188467B900898F9A /* CFNetwork.framework */; };
@@ -20,6 +21,7 @@
 		136787B71884757A00898F9A /* MISignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 136787B61884757A00898F9A /* MISignupViewController.m */; };
 		1372F213188370530001C382 /* MIFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1372F212188370530001C382 /* MIFeedViewController.m */; };
 		13B0C56218870295002754B1 /* MILoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B0C56118870295002754B1 /* MILoginViewController.m */; };
+		13C76B2318A218B700C1C5D6 /* MIFollowFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C76B2218A218B700C1C5D6 /* MIFollowFriendViewController.m */; };
 		13E2CCFA1883651F00B6EF8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E2CCF91883651F00B6EF8A /* Foundation.framework */; };
 		13E2CCFC1883652000B6EF8A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E2CCFB1883652000B6EF8A /* CoreGraphics.framework */; };
 		13E2CCFE1883652000B6EF8A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E2CCFD1883652000B6EF8A /* UIKit.framework */; };
@@ -47,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		132E2A2218A4D1430040443F /* MICreateQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MICreateQuestionViewController.h; sourceTree = "<group>"; };
+		132E2A2318A4D1430040443F /* MICreateQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MICreateQuestionViewController.m; sourceTree = "<group>"; };
 		136787A11884674500898F9A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = WYRWYF/Parse.framework; sourceTree = "<group>"; };
 		136787A3188467B900898F9A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		136787A4188467B900898F9A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -63,6 +67,8 @@
 		1372F212188370530001C382 /* MIFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIFeedViewController.m; sourceTree = "<group>"; };
 		13B0C56018870295002754B1 /* MILoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MILoginViewController.h; sourceTree = "<group>"; };
 		13B0C56118870295002754B1 /* MILoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MILoginViewController.m; sourceTree = "<group>"; };
+		13C76B2118A218B700C1C5D6 /* MIFollowFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIFollowFriendViewController.h; sourceTree = "<group>"; };
+		13C76B2218A218B700C1C5D6 /* MIFollowFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIFollowFriendViewController.m; sourceTree = "<group>"; };
 		13E2CCF61883651F00B6EF8A /* WYRWYF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYRWYF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E2CCF91883651F00B6EF8A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		13E2CCFB1883652000B6EF8A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -162,6 +168,10 @@
 			isa = PBXGroup;
 			children = (
 				13E2CD28188365A500B6EF8A /* Storyboard.storyboard */,
+				132E2A2218A4D1430040443F /* MICreateQuestionViewController.h */,
+				132E2A2318A4D1430040443F /* MICreateQuestionViewController.m */,
+				13C76B2118A218B700C1C5D6 /* MIFollowFriendViewController.h */,
+				13C76B2218A218B700C1C5D6 /* MIFollowFriendViewController.m */,
 				13F0C9FD188718E40087131D /* MIFriendsViewController.h */,
 				13F0C9FE188718E40087131D /* MIFriendsViewController.m */,
 				13B0C56018870295002754B1 /* MILoginViewController.h */,
@@ -304,12 +314,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				132E2A2418A4D1430040443F /* MICreateQuestionViewController.m in Sources */,
 				13E2CD0A1883652000B6EF8A /* MIAppDelegate.m in Sources */,
 				13E2CD061883652000B6EF8A /* main.m in Sources */,
 				136787B71884757A00898F9A /* MISignupViewController.m in Sources */,
 				1372F213188370530001C382 /* MIFeedViewController.m in Sources */,
 				13F0C9FF188718E40087131D /* MIFriendsViewController.m in Sources */,
 				13B0C56218870295002754B1 /* MILoginViewController.m in Sources */,
+				13C76B2318A218B700C1C5D6 /* MIFollowFriendViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

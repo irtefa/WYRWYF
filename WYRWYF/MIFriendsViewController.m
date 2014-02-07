@@ -56,19 +56,27 @@
     if (tableView == self.searchDisplayController.searchResultsTableView) {
         PFUser *user = [searchResults objectAtIndex:indexPath.row];
         cell.textLabel.text = user.username;
+        // If added as a friend add a checkmark
+        // Else add a None
     } else {
-        PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
-        cell.textLabel.text = user.username;
+//        PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
+//        cell.textLabel.text = user.username;
     }
-    
+
     return cell;
 }
 
-// Helper methods
+#pragma mark - Table view delegate
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    MIFollowFriendViewController *view = [[MIFollowFriendViewController alloc] init];
+    [self.navigationController pushViewController:view animated:YES];
+}
+
+#pragma mark - Helper methods
 
 -(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scop {
     NSPredicate *resultPredicate = [NSPredicate
-                                    predicateWithFormat:@"SELF.username LIKE[cd] %@",
+                                    predicateWithFormat:@"SELF.username CONTAINS[cd] %@",
                                     searchText];
     searchResults = [self.allUsers filteredArrayUsingPredicate:resultPredicate];
 }

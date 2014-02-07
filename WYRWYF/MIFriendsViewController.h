@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "MIFollowFriendViewController.h"
 
 @interface MIFriendsViewController : UITableViewController
 @property (nonatomic, strong) NSArray *allUsers;
