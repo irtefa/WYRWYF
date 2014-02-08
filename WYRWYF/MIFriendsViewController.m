@@ -14,17 +14,32 @@
 
 @implementation MIFriendsViewController {
     NSArray *searchResults;
+    PFUser *currentUser;
+    NSArray *friends;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    currentUser = [PFUser currentUser];
+    
     PFQuery *query = [PFUser query];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error) {
             NSLog(@"Error occured fetching users");
         } else {
             self.allUsers = objects;
+            [self.tableView reloadData];
+        }
+    }];
+    
+    PFRelation *relation = [currentUser relationforKey:@"Friendship"];
+    [[relation query] findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error) {
+            NSLog(@"Error occured fetching users");
+        } else {
+            friends = objects;
+            NSLog(@"%d", friends.count);
             [self.tableView reloadData];
         }
     }];
@@ -43,7 +58,7 @@
         return [searchResults count];
     }
     
-    return self.allUsers.count;
+    return friends.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -56,28 +71,20 @@
     if (tableView == self.searchDisplayController.searchResultsTableView) {
         PFUser *user = [searchResults objectAtIndex:indexPath.row];
         cell.textLabel.text = user.username;
-        // If added as a friend add a checkmark
-        // Else add a None
     } else {
-//        PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
-//        cell.textLabel.text = user.username;
+        PFUser *user = [friends objectAtIndex:indexPath.row];
+        cell.textLabel.text = user.username;
     }
 
     return cell;
 }
 
-//#pragma mark - Table view delegate
-//- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    MIFollowFriendViewController *view = [[MIFollowFriendViewController alloc] init];
-//    [self.navigationController pushViewController:view animated:YES];
-//}
-
 #pragma mark - Helper methods
 
 -(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scop {
     NSPredicate *resultPredicate = [NSPredicate
-                                    predicateWithFormat:@"SELF.username CONTAINS[cd] %@",
-                                    searchText];
+                                    predicateWithFormat:@"SELF.username CONTAINS[cd] %@ AND NOT (%@ IN %@)" ,
+                                    searchText, searchText, currentUser.username];
     searchResults = [self.allUsers filteredArrayUsingPredicate:resultPredicate];
 }
 
@@ -92,8 +99,12 @@ controller shouldReloadTableForSearchString:(NSString *)searchString {
 {
    if ([[segue identifier] isEqualToString:@"showProfile"]) {
        MIProfileViewController *viewController = segue.destinationViewController;
-       NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-       NSString  *object = self.allUsers[path.row];
+       
+       UIButton *btn = (UIButton *) sender;
+       CGRect buttonFrameInTableView = [btn convertRect:btn.bounds toView:self.tableView];
+       NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonFrameInTableView.origin];
+              
+       NSString  *object = searchResults[indexPath.row];
        viewController.detailItem = object;
    }
 }
