@@ -43,7 +43,7 @@
         return [searchResults count];
     }
     
-    return [self.allUsers count];
+    return self.allUsers.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -66,11 +66,11 @@
     return cell;
 }
 
-#pragma mark - Table view delegate
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
-    MIFollowFriendViewController *view = [[MIFollowFriendViewController alloc] init];
-    [self.navigationController pushViewController:view animated:YES];
-}
+//#pragma mark - Table view delegate
+//- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    MIFollowFriendViewController *view = [[MIFollowFriendViewController alloc] init];
+//    [self.navigationController pushViewController:view animated:YES];
+//}
 
 #pragma mark - Helper methods
 
@@ -87,4 +87,15 @@ controller shouldReloadTableForSearchString:(NSString *)searchString {
     
     return YES;
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+   if ([[segue identifier] isEqualToString:@"showProfile"]) {
+       MIProfileViewController *viewController = segue.destinationViewController;
+       NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+       NSString  *object = self.allUsers[path.row];
+       viewController.detailItem = object;
+   }
+}
+
 @end

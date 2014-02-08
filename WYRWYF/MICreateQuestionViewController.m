@@ -25,5 +25,7 @@
 
 - (IBAction)cancelQuestion:(id)sender {
     // Figure this shit out later
+    [self.firstPart resignFirstResponder];
+    [self.secondPart resignFirstResponder];
 }
 @end
