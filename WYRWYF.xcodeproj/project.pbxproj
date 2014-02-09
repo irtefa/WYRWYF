@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		132E2A2418A4D1430040443F /* MICreateQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 132E2A2318A4D1430040443F /* MICreateQuestionViewController.m */; };
+		13342F7718A71CEF0013A244 /* MIPickRecipientsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13342F7618A71CEF0013A244 /* MIPickRecipientsViewController.m */; };
+		1364594E18A70CCD00229258 /* full__0000s_0032_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 1364594D18A70CCD00229258 /* full__0000s_0032_home.png */; };
+		1364595018A70E2F00229258 /* line__0000s_0099_upload.png in Resources */ = {isa = PBXBuildFile; fileRef = 1364594F18A70E2F00229258 /* line__0000s_0099_upload.png */; };
+		1364595218A70EC200229258 /* line__0000s_0105_mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 1364595118A70EC200229258 /* line__0000s_0105_mail.png */; };
+		1364595418A70ECB00229258 /* line__0000s_0032_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 1364595318A70ECB00229258 /* line__0000s_0032_home.png */; };
 		136787A21884674500898F9A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136787A11884674500898F9A /* Parse.framework */; };
 		136787AC188467B900898F9A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136787A3188467B900898F9A /* AudioToolbox.framework */; };
 		136787AD188467B900898F9A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136787A4188467B900898F9A /* CFNetwork.framework */; };
@@ -36,11 +41,6 @@
 		13E2CD29188365A500B6EF8A /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13E2CD28188365A500B6EF8A /* Storyboard.storyboard */; };
 		13EFBE5218A5A6F300092458 /* MIProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EFBE5118A5A6F300092458 /* MIProfileViewController.m */; };
 		13F0C9FF188718E40087131D /* MIFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F0C9FE188718E40087131D /* MIFriendsViewController.m */; };
-		13F9B25118A5BCB8004B57F5 /* friends@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F9B25018A5BCB8004B57F5 /* friends@2x.png */; };
-		13F9B25318A5BE24004B57F5 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F9B25218A5BE24004B57F5 /* home.png */; };
-		13F9B25518A5BF09004B57F5 /* friends.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F9B25418A5BF09004B57F5 /* friends.png */; };
-		13F9B25818A5BF14004B57F5 /* inbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F9B25618A5BF14004B57F5 /* inbox.png */; };
-		13F9B25918A5BF14004B57F5 /* inbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F9B25718A5BF14004B57F5 /* inbox@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +56,12 @@
 /* Begin PBXFileReference section */
 		132E2A2218A4D1430040443F /* MICreateQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MICreateQuestionViewController.h; sourceTree = "<group>"; };
 		132E2A2318A4D1430040443F /* MICreateQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MICreateQuestionViewController.m; sourceTree = "<group>"; };
+		13342F7518A71CEF0013A244 /* MIPickRecipientsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIPickRecipientsViewController.h; sourceTree = "<group>"; };
+		13342F7618A71CEF0013A244 /* MIPickRecipientsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIPickRecipientsViewController.m; sourceTree = "<group>"; };
+		1364594D18A70CCD00229258 /* full__0000s_0032_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = full__0000s_0032_home.png; sourceTree = "<group>"; };
+		1364594F18A70E2F00229258 /* line__0000s_0099_upload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line__0000s_0099_upload.png; sourceTree = "<group>"; };
+		1364595118A70EC200229258 /* line__0000s_0105_mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line__0000s_0105_mail.png; sourceTree = "<group>"; };
+		1364595318A70ECB00229258 /* line__0000s_0032_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line__0000s_0032_home.png; sourceTree = "<group>"; };
 		136787A11884674500898F9A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = WYRWYF/Parse.framework; sourceTree = "<group>"; };
 		136787A3188467B900898F9A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		136787A4188467B900898F9A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -93,11 +99,6 @@
 		13EFBE5118A5A6F300092458 /* MIProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIProfileViewController.m; sourceTree = "<group>"; };
 		13F0C9FD188718E40087131D /* MIFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIFriendsViewController.h; sourceTree = "<group>"; };
 		13F0C9FE188718E40087131D /* MIFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIFriendsViewController.m; sourceTree = "<group>"; };
-		13F9B25018A5BCB8004B57F5 /* friends@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friends@2x.png"; sourceTree = "<group>"; };
-		13F9B25218A5BE24004B57F5 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
-		13F9B25418A5BF09004B57F5 /* friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friends.png; sourceTree = "<group>"; };
-		13F9B25618A5BF14004B57F5 /* inbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inbox.png; sourceTree = "<group>"; };
-		13F9B25718A5BF14004B57F5 /* inbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inbox@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,10 +179,12 @@
 			isa = PBXGroup;
 			children = (
 				13E2CD28188365A500B6EF8A /* Storyboard.storyboard */,
-				13EFBE5018A5A6F300092458 /* MIProfileViewController.h */,
-				13EFBE5118A5A6F300092458 /* MIProfileViewController.m */,
+				13342F7518A71CEF0013A244 /* MIPickRecipientsViewController.h */,
+				13342F7618A71CEF0013A244 /* MIPickRecipientsViewController.m */,
 				132E2A2218A4D1430040443F /* MICreateQuestionViewController.h */,
 				132E2A2318A4D1430040443F /* MICreateQuestionViewController.m */,
+				13EFBE5018A5A6F300092458 /* MIProfileViewController.h */,
+				13EFBE5118A5A6F300092458 /* MIProfileViewController.m */,
 				13F0C9FD188718E40087131D /* MIFriendsViewController.h */,
 				13F0C9FE188718E40087131D /* MIFriendsViewController.m */,
 				13B0C56018870295002754B1 /* MILoginViewController.h */,
@@ -201,11 +204,10 @@
 		13E2CD001883652000B6EF8A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				13F9B25218A5BE24004B57F5 /* home.png */,
-				13F9B25618A5BF14004B57F5 /* inbox.png */,
-				13F9B25718A5BF14004B57F5 /* inbox@2x.png */,
-				13F9B25418A5BF09004B57F5 /* friends.png */,
-				13F9B25018A5BCB8004B57F5 /* friends@2x.png */,
+				1364594F18A70E2F00229258 /* line__0000s_0099_upload.png */,
+				1364594D18A70CCD00229258 /* full__0000s_0032_home.png */,
+				1364595118A70EC200229258 /* line__0000s_0105_mail.png */,
+				1364595318A70ECB00229258 /* line__0000s_0032_home.png */,
 				13E2CD011883652000B6EF8A /* WYRWYF-Info.plist */,
 				13E2CD021883652000B6EF8A /* InfoPlist.strings */,
 				13E2CD051883652000B6EF8A /* main.m */,
@@ -308,14 +310,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1364595218A70EC200229258 /* line__0000s_0105_mail.png in Resources */,
 				13E2CD041883652000B6EF8A /* InfoPlist.strings in Resources */,
-				13F9B25918A5BF14004B57F5 /* inbox@2x.png in Resources */,
-				13F9B25518A5BF09004B57F5 /* friends.png in Resources */,
-				13F9B25318A5BE24004B57F5 /* home.png in Resources */,
+				1364594E18A70CCD00229258 /* full__0000s_0032_home.png in Resources */,
+				1364595418A70ECB00229258 /* line__0000s_0032_home.png in Resources */,
 				13E2CD0C1883652000B6EF8A /* Images.xcassets in Resources */,
-				13F9B25118A5BCB8004B57F5 /* friends@2x.png in Resources */,
+				1364595018A70E2F00229258 /* line__0000s_0099_upload.png in Resources */,
 				13E2CD29188365A500B6EF8A /* Storyboard.storyboard in Resources */,
-				13F9B25818A5BF14004B57F5 /* inbox.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13342F7718A71CEF0013A244 /* MIPickRecipientsViewController.m in Sources */,
 				132E2A2418A4D1430040443F /* MICreateQuestionViewController.m in Sources */,
 				13E2CD0A1883652000B6EF8A /* MIAppDelegate.m in Sources */,
 				13EFBE5218A5A6F300092458 /* MIProfileViewController.m in Sources */,

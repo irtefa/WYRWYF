@@ -14,13 +14,10 @@
 
 @implementation MICreateQuestionViewController
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-}
-
-- (IBAction)confirmQuestion:(id)sender {
 }
 
 - (IBAction)cancelQuestion:(id)sender {
@@ -28,4 +25,10 @@
     [self.firstPart resignFirstResponder];
     [self.secondPart resignFirstResponder];
 }
+
+- (IBAction)confirmQuestion:(id)sender {
+    [[NSUserDefaults standardUserDefaults] setObject:[self.firstPart.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forKey:@"firstPart"];
+    [[NSUserDefaults standardUserDefaults] setObject:[self.secondPart.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forKey:@"secondPart"];
+}
+
 @end

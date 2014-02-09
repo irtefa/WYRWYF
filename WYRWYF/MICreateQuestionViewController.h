@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MIPickRecipientsViewController.h"
 
 @interface MICreateQuestionViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *firstPart;
-@property (weak, nonatomic) IBOutlet UITextField *secondPart;
-- (IBAction)confirmQuestion:(id)sender;
+@property (strong, nonatomic) IBOutlet UITextField *firstPart;
+@property (strong, nonatomic) IBOutlet UITextField *secondPart;
 - (IBAction)cancelQuestion:(id)sender;
+- (IBAction)confirmQuestion:(id)sender;
 
 @end

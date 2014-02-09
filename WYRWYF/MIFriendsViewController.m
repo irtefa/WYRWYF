@@ -56,9 +56,11 @@
     // Return the number of rows in the section.
     if (tableView == self.searchDisplayController.searchResultsTableView) {
         return [searchResults count];
+    } else if (friends.count > 0) {
+        return friends.count;
     }
     
-    return friends.count;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -72,8 +74,10 @@
         PFUser *user = [searchResults objectAtIndex:indexPath.row];
         cell.textLabel.text = user.username;
     } else {
-        PFUser *user = [friends objectAtIndex:indexPath.row];
-        cell.textLabel.text = user.username;
+        if (friends.count > 0) {
+            PFUser *user = [friends objectAtIndex:indexPath.row];
+            cell.textLabel.text = user.username;
+        }
     }
 
     return cell;
@@ -103,9 +107,15 @@ controller shouldReloadTableForSearchString:(NSString *)searchString {
        UIButton *btn = (UIButton *) sender;
        CGRect buttonFrameInTableView = [btn convertRect:btn.bounds toView:self.tableView];
        NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonFrameInTableView.origin];
-              
-       NSString  *object = searchResults[indexPath.row];
+    
+       NSString  *object = [searchResults objectAtIndex:indexPath.row];
+       
+       if (object == NULL) {
+           object = [friends objectAtIndex:indexPath.row];
+       }
+
        viewController.detailItem = object;
+       viewController.friends = friends;
    }
 }
 

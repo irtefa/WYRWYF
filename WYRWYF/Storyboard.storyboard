@@ -34,7 +34,7 @@
                         <viewControllerLayoutGuide type="bottom" id="lsf-8V-QGe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jFE-QZ-KUH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Would you rather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bd9-MV-mut">
@@ -68,7 +68,9 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="confirmQuestion:" destination="IQs-ai-zYW" eventType="touchUpInside" id="5NV-iL-5lq"/>
+                                    <action selector="cancelQuestion:" destination="IQs-ai-zYW" eventType="touchUpInside" id="3bC-8D-F7L"/>
+                                    <action selector="confirmQuestion:" destination="IQs-ai-zYW" eventType="touchUpInside" id="f8a-Mh-2dC"/>
+                                    <segue destination="xB5-Wb-ehx" kind="push" identifier="pickRecipients" id="wD9-wL-4uQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8N-YE-m0Z">
@@ -99,7 +101,7 @@
             <objects>
                 <tableViewController id="yZF-pp-dfc" customClass="MIFriendsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="73c-YF-lG2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search for usernames" id="Odd-nm-boy">
@@ -159,7 +161,7 @@
             <objects>
                 <tableViewController id="r2a-sk-DDV" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sfY-Nx-Ebn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -192,7 +194,7 @@
                         <viewControllerLayoutGuide type="bottom" id="WSk-Ce-rbG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DoY-yc-FvI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6W-pl-ecr">
@@ -217,6 +219,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Friend Profile" id="mDf-GR-ZyS"/>
                     <connections>
+                        <outlet property="addFriendButton" destination="a5k-GE-kah" id="7oa-cx-zDf"/>
                         <outlet property="usernameLabel" destination="O6W-pl-ecr" id="Wf8-Pd-hAa"/>
                     </connections>
                 </viewController>
@@ -224,12 +227,41 @@
             </objects>
             <point key="canvasLocation" x="980" y="894"/>
         </scene>
+        <!--Pick Recipients View Controller - Pick Recipients-->
+        <scene sceneID="NEO-hr-V4k">
+            <objects>
+                <tableViewController id="xB5-Wb-ehx" customClass="MIPickRecipientsViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Kad-vz-3dD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="b5a-CF-2I9">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b5a-CF-2I9" id="JaO-er-2ZC">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xB5-Wb-ehx" id="h0M-nK-3np"/>
+                            <outlet property="delegate" destination="xB5-Wb-ehx" id="UKi-Jq-Ker"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Pick Recipients" id="mQo-7l-5AT"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OhN-gB-TSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1053" y="252"/>
+        </scene>
         <!--Feed View Controller - WYRWF-->
         <scene sceneID="hXb-Jx-ZMC">
             <objects>
                 <tableViewController id="kqR-7i-hwH" customClass="MIFeedViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jbP-B6-Vub">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -243,7 +275,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Feed" id="NFB-3x-3oW"/>
+                    <tabBarItem key="tabBarItem" title="" image="full__0000s_0032_home.png" id="NFB-3x-3oW"/>
                     <navigationItem key="navigationItem" title="WYRWF" id="rwx-xo-Caj">
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="hf2-Yf-wUg">
                             <connections>
@@ -269,7 +301,7 @@
                         <viewControllerLayoutGuide type="bottom" id="BBZ-9y-E6q"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Pe3-6g-0Jo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o0H-L0-qe8">
@@ -333,7 +365,7 @@
                         <viewControllerLayoutGuide type="bottom" id="mBj-on-z97"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LXD-ZZ-K6b">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j3a-jD-9dQ">
@@ -390,7 +422,7 @@
         <scene sceneID="XfF-DK-qbR">
             <objects>
                 <navigationController definesPresentationContext="YES" id="3ZB-XT-Aen" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Feed" id="Xur-OX-EPW"/>
+                    <tabBarItem key="tabBarItem" title="" image="full__0000s_0032_home.png" id="Xur-OX-EPW"/>
                     <navigationItem key="navigationItem" title="WYRWF" id="gKl-S8-Dc3"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hFt-UT-WTC">
@@ -404,11 +436,11 @@
             </objects>
             <point key="canvasLocation" x="224" y="-405"/>
         </scene>
-        <!--Navigation Controller - Friends-->
+        <!--Navigation Controller-->
         <scene sceneID="wQu-yX-z7y">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BHP-Mh-zF6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Friends" image="friends.png" id="ybF-zq-mak"/>
+                    <tabBarItem key="tabBarItem" title="" image="friends.png" id="ybF-zq-mak"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="unz-zK-H8I">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -423,11 +455,11 @@
             </objects>
             <point key="canvasLocation" x="224" y="896"/>
         </scene>
-        <!--Navigation Controller - WYRWYF-->
+        <!--Navigation Controller-->
         <scene sceneID="9V4-Eh-Qad">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="11E-lH-8CW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="WYRWYF" id="JEC-pU-tqH"/>
+                    <tabBarItem key="tabBarItem" title="" image="line__0000s_0099_upload.png" id="JEC-pU-tqH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hmx-Rm-PUC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -442,11 +474,11 @@
             </objects>
             <point key="canvasLocation" x="224" y="257"/>
         </scene>
-        <!--Navigation Controller - Inbox-->
+        <!--Navigation Controller-->
         <scene sceneID="Hv3-8Z-3Wc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gNw-Dc-Dmu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Inbox" image="inbox.png" id="UGm-4q-eJO"/>
+                    <tabBarItem key="tabBarItem" title="" image="line__0000s_0105_mail.png" id="UGm-4q-eJO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HbD-AN-ulo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -464,11 +496,13 @@
     </scenes>
     <resources>
         <image name="friends.png" width="40" height="24"/>
-        <image name="inbox.png" width="32" height="21"/>
+        <image name="full__0000s_0032_home.png" width="50" height="50"/>
+        <image name="line__0000s_0099_upload.png" width="40" height="48"/>
+        <image name="line__0000s_0105_mail.png" width="50" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
